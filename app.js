@@ -31,11 +31,18 @@ function renderShell(active) {
   document.body.insertAdjacentHTML("afterbegin", `
   <div class="min-h-screen bg-slate-50 md:flex">
     <header class="flex h-16 items-center justify-between border-b bg-white px-4 md:hidden">
-      <button onclick="document.getElementById('mobnav').classList.toggle('hidden')" class="rounded-md p-2"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <button onclick="abrirMenu()" class="rounded-md p-2"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       <span class="font-bold text-slate-800">clínica PEP</span>
       <div class="h-8 w-8 rounded-full bg-emerald-100"></div>
     </header>
-    <div id="mobnav" class="hidden border-b bg-white p-3 md:hidden">${menuHtml}</div>
+    <div id="menu-overlay" onclick="fecharMenu()" class="fixed inset-0 z-40 hidden bg-black/40 md:hidden"></div>
+    <div id="mobnav" class="fixed inset-y-0 left-0 z-50 w-72 -translate-x-full overflow-y-auto bg-white p-4 shadow-xl transition-transform duration-200 md:hidden">
+      <div class="mb-4 flex items-center justify-between">
+        <div class="flex items-center gap-2"><div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500 text-white font-bold">P</div><span class="font-bold text-slate-800">clínica PEP</span></div>
+        <button onclick="fecharMenu()" class="rounded-md p-1 text-slate-400">✕</button>
+      </div>
+      ${menuHtml}
+    </div>
     <aside class="hidden w-72 flex-col border-r bg-white md:flex">
       <div class="flex items-center gap-2 px-6 py-5">
         <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500 text-white font-bold">P</div>
@@ -49,6 +56,15 @@ function renderShell(active) {
   </div>`);
   const tpl = document.getElementById("page-content");
   if (tpl) document.getElementById("conteudo").innerHTML = tpl.innerHTML;
+}
+
+function abrirMenu() {
+  document.getElementById("mobnav").classList.remove("-translate-x-full");
+  document.getElementById("menu-overlay").classList.remove("hidden");
+}
+function fecharMenu() {
+  document.getElementById("mobnav").classList.add("-translate-x-full");
+  document.getElementById("menu-overlay").classList.add("hidden");
 }
 
 // Cabeçalho de página padrão (título grande + subtítulo + ação à direita)
