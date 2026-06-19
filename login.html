@@ -3,30 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clínica PEP — Entrar</title>
+<title>Entrar — Clínica PEP</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-gradient-to-br from-emerald-50 to-sky-50">
 <main class="flex min-h-screen items-center justify-center px-4">
-  <div class="w-full max-w-md rounded-xl border bg-white shadow">
-    <div class="flex flex-col space-y-1.5 p-6">
-      <h3 class="text-2xl font-semibold tracking-tight text-teal-800">Entrar na Clínica PEP</h3>
-      <p class="text-sm text-slate-500">Informe suas credenciais para acessar o sistema.</p>
+  <div class="w-full max-w-md rounded-2xl border bg-white p-8 shadow-lg">
+    <div class="mb-6 flex items-center gap-2">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-lg font-bold text-white">P</div>
+      <span class="text-xl font-bold text-slate-800">clínica PEP</span>
     </div>
-    <div class="p-6 pt-0">
-      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';" class="space-y-4">
-        <div class="space-y-2">
-          <label class="text-sm font-medium" for="email">E-mail</label>
-          <input id="email" type="email" value="admin@pep.local" class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="seu@email.com">
-        </div>
-        <div class="space-y-2">
-          <label class="text-sm font-medium" for="senha">Senha</label>
-          <input id="senha" type="password" value="senha123" class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Digite sua senha">
-        </div>
-        <button type="submit" class="inline-flex h-10 w-full items-center justify-center rounded-md bg-teal-700 px-4 py-2 text-sm font-medium text-white hover:bg-teal-800">Entrar</button>
-      </form>
-      <p class="mt-4 text-center text-xs text-slate-400">Protótipo de layout — dados fictícios</p>
-    </div>
+    <h3 class="text-2xl font-bold text-slate-900">Entrar</h3>
+    <p class="mt-1 text-sm text-slate-500">Informe suas credenciais para acessar o sistema.</p>
+    <form onsubmit="event.preventDefault();window.location.href='dashboard.html'" class="mt-6 space-y-4">
+      <div class="space-y-1.5"><label class="text-sm font-medium text-slate-600">E-mail</label><input type="email" value="admin@pep.local" class="h-11 w-full rounded-lg border border-slate-200 px-3 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100"></div>
+      <div class="space-y-1.5"><label class="text-sm font-medium text-slate-600">Senha</label><input type="password" value="senha123" class="h-11 w-full rounded-lg border border-slate-200 px-3 text-sm focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-100"></div>
+      <button type="submit" class="h-11 w-full rounded-lg bg-emerald-500 text-sm font-medium text-white hover:bg-emerald-600">Entrar</button>
+    </form>
+    <p class="mt-4 text-center text-xs text-slate-400">Protótipo de layout — dados fictícios</p>
   </div>
 </main>
 </body>

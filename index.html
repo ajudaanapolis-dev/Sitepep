@@ -6,28 +6,27 @@
 <title>Clínica PEP — Protótipo</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-gradient-to-br from-emerald-50 to-sky-50">
 <main class="mx-auto max-w-3xl px-4 py-12">
-  <div class="rounded-xl border bg-white p-8 shadow">
-    <h1 class="text-3xl font-bold text-teal-800">Clínica PEP</h1>
-    <p class="mt-1 text-slate-600">Protótipo de layout — Prontuário Eletrônico do Paciente</p>
-    <p class="mt-4 text-sm text-slate-500">Este é um protótipo visual navegável, com dados fictícios. Os botões e formulários simulam a navegação, mas não salvam dados.</p>
+  <div class="rounded-2xl border bg-white p-8 shadow-lg">
+    <div class="mb-2 flex items-center gap-2"><div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-lg font-bold text-white">P</div><h1 class="text-3xl font-bold text-slate-900">clínica PEP</h1></div>
+    <p class="text-slate-600">Protótipo de layout — Prontuário Eletrônico do Paciente</p>
+    <p class="mt-3 text-sm text-slate-500">Protótipo visual navegável, com dados fictícios. Estilo inspirado em sistemas de gestão clínica.</p>
     <div class="mt-6 grid gap-3 sm:grid-cols-2">
-      <a href="login.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">1. Login</span><span class="block text-sm text-slate-500">Tela de entrada</span></a>
-      <a href="dashboard.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">2. Dashboard</span><span class="block text-sm text-slate-500">Visão geral e indicadores</span></a>
-      <a href="pacientes.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">3. Pacientes</span><span class="block text-sm text-slate-500">Listagem com busca</span></a>
-      <a href="paciente-novo.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">4. Novo paciente</span><span class="block text-sm text-slate-500">Cadastro com LGPD</span></a>
-      <a href="paciente-ficha.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">5. Ficha do paciente</span><span class="block text-sm text-slate-500">Abas Dados/Histórico/Documentos</span></a>
-      <a href="agenda.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">6. Agenda</span><span class="block text-sm text-slate-500">Grade com modais</span></a>
-      <a href="atendimento.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">7. Atendimento clínico</span><span class="block text-sm text-slate-500">Queixa, anamnese, exame físico, HD, CD</span></a>
-      <a href="prescricao.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">8. Prescrição e documentos</span><span class="block text-sm text-slate-500">Receita e atestados</span></a>
-      <a href="imprimir-prescricao.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">9. Impressão de receita</span><span class="block text-sm text-slate-500">Layout de papel / PDF</span></a>
-      <a href="imprimir-documento.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">10. Impressão de atestado</span><span class="block text-sm text-slate-500">Layout de papel / PDF</span></a>
-      <a href="usuarios.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">11. Usuários</span><span class="block text-sm text-slate-500">Gestão (admin)</span></a>
-      <a href="auditoria.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">12. Auditoria LGPD</span><span class="block text-sm text-slate-500">Log de ações (admin)</span></a>
-      <a href="acesso-negado.html" class="rounded-lg border border-slate-200 p-4 hover:bg-slate-50"><span class="font-medium">13. Acesso negado</span><span class="block text-sm text-slate-500">Bloqueio por permissão</span></a>
+      <a href="login.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">1. Login</span><span class="block text-sm text-slate-500">Tela de entrada</span></a>
+      <a href="dashboard.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">2. Início</span><span class="block text-sm text-slate-500">Visão geral</span></a>
+      <a href="pacientes.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">3. Pacientes</span><span class="block text-sm text-slate-500">Listagem</span></a>
+      <a href="paciente-novo.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">4. Novo paciente</span><span class="block text-sm text-slate-500">Cadastro + LGPD</span></a>
+      <a href="paciente-ficha.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">5. Ficha do paciente</span><span class="block text-sm text-slate-500">Abas</span></a>
+      <a href="agenda.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">6. Agenda</span><span class="block text-sm text-slate-500">Slots de 10 min</span></a>
+      <a href="atendimentos-dia.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">7. Atendimentos do dia</span><span class="block text-sm text-slate-500">Fila de atendimento</span></a>
+      <a href="atendimento.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">8. Atendimento (prontuário)</span><span class="block text-sm text-slate-500">Seções: queixa, anamnese, conduta, exames, laudo, prescrição, atestado</span></a>
+      <a href="imprimir-prescricao.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">9. Impressão de receita</span><span class="block text-sm text-slate-500">PDF</span></a>
+      <a href="imprimir-documento.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">10. Impressão de atestado</span><span class="block text-sm text-slate-500">PDF</span></a>
+      <a href="usuarios.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">11. Configurações</span><span class="block text-sm text-slate-500">Usuários</span></a>
+      <a href="auditoria.html" class="rounded-xl border border-slate-200 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="font-medium">12. Relatórios</span><span class="block text-sm text-slate-500">Auditoria LGPD</span></a>
     </div>
-    <p class="mt-6 text-sm text-slate-500">Dica: a partir do <a href="login.html" class="text-teal-700 underline">login</a>, você navega por toda a sidebar como no sistema real.</p>
+    <p class="mt-6 text-sm text-slate-500">A partir do <a href="login.html" class="text-emerald-700 underline">login</a>, você navega por toda a sidebar.</p>
   </div>
 </main>
 </body>

@@ -6,82 +6,56 @@
 <title>Agenda — Clínica PEP</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-slate-50">
 <template id="page-content">
-
-<div class="space-y-6">
-  <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-    <h1 class="text-2xl font-semibold">Agenda</h1>
-    <button onclick="document.getElementById('modal').classList.remove('hidden')" class="inline-flex h-10 items-center rounded-md bg-teal-700 px-4 text-sm font-medium text-white hover:bg-teal-800">Nova consulta</button>
+<div class="border-b bg-white px-6 py-5"><div class="flex items-start justify-between gap-4"><div><h1 class="text-3xl font-bold text-slate-900">Agenda</h1><p class="mt-0.5 text-sm text-slate-400">Agenda</p></div><button class="rounded-lg bg-emerald-200 px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-300">+ Adicionar ▾</button></div></div>
+<div class="space-y-4 p-6">
+  <div class="rounded-xl border bg-white p-4 shadow-sm">
+    <label class="text-sm text-slate-500">Paciente</label>
+    <div class="mt-1 flex gap-2"><input placeholder="Selecione o paciente" class="h-11 flex-1 rounded-lg border border-slate-200 px-3 text-sm"><button class="rounded-lg bg-emerald-100 px-4 text-sm font-medium text-emerald-800">Pesquisar</button></div>
   </div>
-  <div class="flex flex-wrap items-center gap-2 rounded-xl border bg-white p-4 shadow">
-    <div class="flex gap-1 rounded-md bg-slate-100 p-1">
-      <button class="inline-flex h-9 items-center rounded-md bg-teal-700 px-3 text-sm font-medium text-white">Dia</button>
-      <button class="inline-flex h-9 items-center rounded-md px-3 text-sm hover:bg-slate-200">Semana</button>
-    </div>
-    <div class="flex items-center gap-1">
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">&larr;</button>
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Hoje</button>
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">&rarr;</button>
-    </div>
-    <span class="text-sm font-medium text-slate-700">segunda-feira, 15/06/2026</span>
-    <div class="ml-auto flex items-center gap-2">
-      <label class="text-sm text-slate-600">Profissional:</label>
-      <select class="h-9 rounded-md border border-slate-200 bg-white px-2 text-sm"><option>Todos</option><option>Dra. Mariana Alves</option></select>
+  <div class="flex flex-wrap items-center gap-3">
+    <button class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm">📅 Agendas agrupadas ▾</button>
+    <div class="flex overflow-hidden rounded-lg border border-slate-200">
+      <button class="px-4 py-2.5 text-sm">Mês</button>
+      <button class="border-x px-4 py-2.5 text-sm">Semana</button>
+      <button class="bg-emerald-200 px-4 py-2.5 text-sm font-medium text-emerald-900">Dia</button>
     </div>
   </div>
-  <section class="overflow-x-auto rounded-xl border bg-white shadow">
-    <table class="w-full text-sm">
-      <thead><tr class="border-b bg-slate-50"><th class="w-16 p-2 text-left font-medium text-slate-500">Hora</th><th class="min-w-40 p-2 text-left font-medium text-slate-700">Consultas</th></tr></thead>
-      <tbody>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">07:00</td><td class="p-1 align-top"></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">07:30</td><td class="p-1 align-top"></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">08:00</td><td class="p-1 align-top"><button onclick="document.getElementById('cmodal').classList.remove('hidden')" class="w-full rounded-md border border-sky-300 bg-sky-50 px-2 py-1 text-left text-xs leading-tight text-sky-900"><span class="block font-semibold">08:00</span><span class="block truncate">João Pedro da Silva</span></button></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">08:30</td><td class="p-1 align-top"></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">09:00</td><td class="p-1 align-top"><button onclick="document.getElementById('cmodal').classList.remove('hidden')" class="w-full rounded-md border border-green-300 bg-green-50 px-2 py-1 text-left text-xs leading-tight text-green-900"><span class="block font-semibold">09:00</span><span class="block truncate">Ana Clara Rodrigues</span></button></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">09:30</td><td class="p-1 align-top"></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">10:00</td><td class="p-1 align-top"><button onclick="document.getElementById('cmodal').classList.remove('hidden')" class="w-full rounded-md border border-sky-300 bg-sky-50 px-2 py-1 text-left text-xs leading-tight text-sky-900"><span class="block font-semibold">10:00</span><span class="block truncate">Lucas Henrique Oliveira</span></button></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">10:30</td><td class="p-1 align-top"></td></tr>
-        <tr class="border-b"><td class="p-2 align-top text-xs font-medium text-slate-500">11:00</td><td class="p-1 align-top"></td></tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="flex flex-wrap gap-3 rounded-xl border bg-white p-4 text-xs shadow">
-    <span class="font-medium text-slate-600">Legenda:</span>
-    <span class="rounded-md border border-sky-300 bg-sky-50 px-2 py-0.5 text-sky-900">Agendada</span>
-    <span class="rounded-md border border-green-300 bg-green-50 px-2 py-0.5 text-green-900">Confirmada</span>
-    <span class="rounded-md border border-amber-300 bg-amber-50 px-2 py-0.5 text-amber-900">Em atendimento</span>
-    <span class="rounded-md border border-slate-300 bg-slate-100 px-2 py-0.5 text-slate-600">Finalizada</span>
-    <span class="rounded-md border border-red-300 bg-red-50 px-2 py-0.5 text-red-900">Faltou</span>
-    <span class="rounded-md border border-slate-200 bg-white px-2 py-0.5 text-slate-400 line-through">Cancelada</span>
-  </section>
-</div>
-<div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-  <div class="w-full max-w-lg rounded-xl border bg-white p-6 shadow-lg">
-    <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">Nova consulta</h3><button onclick="document.getElementById('modal').classList.add('hidden')" class="text-slate-500">&times;</button></div>
-    <div class="mt-4 space-y-4">
-      <div class="space-y-2"><label class="text-sm font-medium">Paciente *</label><input placeholder="Digite nome ou CPF" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
-      <div class="space-y-2"><label class="text-sm font-medium">Profissional *</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>Dra. Mariana Alves</option><option>Dr. Rafael Monteiro</option></select></div>
-      <div class="grid grid-cols-2 gap-4"><div class="space-y-2"><label class="text-sm font-medium">Data *</label><input type="date" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div><div class="space-y-2"><label class="text-sm font-medium">Horário *</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>08:00</option><option>08:30</option></select></div></div>
-      <div class="space-y-2"><label class="text-sm font-medium">Duração *</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>30 minutos</option><option>60 minutos</option></select></div>
-      <button onclick="document.getElementById('modal').classList.add('hidden')" class="inline-flex h-10 w-full items-center justify-center rounded-md bg-teal-700 px-4 text-sm font-medium text-white">Agendar</button>
-    </div>
+  <div class="flex items-center gap-2">
+    <button class="h-11 w-11 rounded-lg border border-slate-200">‹</button>
+    <button class="h-11 w-11 rounded-lg border border-slate-200">›</button>
+    <button class="h-11 rounded-lg border border-slate-200 px-4 text-sm">Hoje</button>
+    <span class="ml-2 font-semibold text-slate-700">Sexta 19/06/2026</span>
   </div>
-</div>
-<div id="cmodal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-  <div class="w-full max-w-lg rounded-xl border bg-white p-6 shadow-lg">
-    <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">Consulta</h3><button onclick="document.getElementById('cmodal').classList.add('hidden')" class="text-slate-500">&times;</button></div>
-    <div class="mt-2 space-y-1 text-sm text-slate-700"><p><strong>Paciente:</strong> João Pedro da Silva</p><p><strong>Profissional:</strong> Dra. Mariana Alves</p><p><strong>Horário:</strong> 08:00 (30 min)</p><p><strong>Status:</strong> Agendada</p></div>
-    <div class="mt-4 flex flex-wrap gap-2">
-      <a href="atendimento.html" class="inline-flex h-9 items-center rounded-md bg-teal-700 px-3 text-sm text-white">Iniciar atendimento</a>
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Confirmar</button>
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Remarcar</button>
-      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Marcar falta</button>
-      <button class="inline-flex h-9 items-center rounded-md bg-red-600 px-3 text-sm text-white">Cancelar consulta</button>
-    </div>
+  <div class="overflow-hidden rounded-xl border bg-white shadow-sm">
+    <table class="w-full"><thead><tr class="border-b bg-slate-50"><th class="px-3 py-2 text-left text-xs font-medium text-slate-500">Horário</th><th class="px-3 py-2"></th></tr></thead><tbody><tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:00</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:10</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:20</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:30</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:40</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">07:50</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:00</td><td class="px-3 py-1"><div class="rounded-md bg-emerald-100 px-2 py-1 text-xs text-emerald-800">João Pedro da Silva</div></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:10</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:20</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:30</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:40</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">08:50</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:00</td><td class="px-3 py-1"><div class="rounded-md bg-sky-100 px-2 py-1 text-xs text-sky-800">Ana Clara Rodrigues</div></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:10</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:20</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:30</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:40</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">09:50</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:00</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:10</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:20</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:30</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:40</td><td class="px-3 py-1"></td></tr>
+<tr class="border-b"><td class="w-20 px-3 py-2 text-xs text-slate-500">10:50</td><td class="px-3 py-1"></td></tr>
+</tbody></table>
   </div>
-</div>
-</template>
+</div></template>
 <script src="app.js"></script>
 <script>renderShell("agenda.html");</script>
 </body>

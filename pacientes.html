@@ -6,49 +6,23 @@
 <title>Pacientes — Clínica PEP</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-slate-50">
 <template id="page-content">
-<div class="space-y-6">
-  <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-    <h1 class="text-2xl font-semibold">Pacientes</h1>
-    <a href="paciente-novo.html" class="inline-flex h-10 items-center rounded-md bg-teal-700 px-4 text-sm font-medium text-white hover:bg-teal-800">Novo paciente</a>
+<div class="border-b bg-white px-6 py-5"><div class="flex items-start justify-between gap-4"><div><h1 class="text-3xl font-bold text-slate-900">Pacientes</h1><p class="mt-0.5 text-sm text-slate-400">Pacientes</p></div><a href="paciente-novo.html" class="rounded-lg bg-emerald-500 px-5 py-3 text-sm font-medium text-white hover:bg-emerald-600">+ Novo paciente</a></div></div>
+<div class="space-y-4 p-6">
+  <div class="flex gap-2"><input placeholder="Buscar por nome ou CPF" class="h-11 max-w-md flex-1 rounded-lg border border-slate-200 px-3 text-sm"><button class="rounded-lg bg-emerald-100 px-4 text-sm font-medium text-emerald-800">Pesquisar</button></div>
+  <div class="overflow-hidden rounded-xl border bg-white shadow-sm">
+    <table class="w-full text-sm"><thead><tr class="border-b bg-slate-50 text-left text-slate-500"><th class="px-4 py-3 font-medium">Nome</th><th class="px-4 py-3 font-medium">CPF</th><th class="px-4 py-3 font-medium">Nascimento</th><th class="px-4 py-3 font-medium">Convênio</th></tr></thead><tbody><tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Ana Clara Rodrigues</a></td><td class="px-4 py-3 text-slate-600">153.509.460-56</td><td class="px-4 py-3 text-slate-600">08/07/1992</td><td class="px-4 py-3 text-slate-600">Unimed</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Arthur Freitas Carvalho</a></td><td class="px-4 py-3 text-slate-600">951.753.852-91</td><td class="px-4 py-3 text-slate-600">03/07/1972</td><td class="px-4 py-3 text-slate-600">SulAmérica</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Beatriz Martins Costa</a></td><td class="px-4 py-3 text-slate-600">935.411.347-80</td><td class="px-4 py-3 text-slate-600">30/01/2001</td><td class="px-4 py-3 text-slate-600">Particular</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">João Pedro da Silva</a></td><td class="px-4 py-3 text-slate-600">529.982.247-25</td><td class="px-4 py-3 text-slate-600">14/03/1988</td><td class="px-4 py-3 text-slate-600">Particular</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Laura Vitória Almeida</a></td><td class="px-4 py-3 text-slate-600">987.654.321-00</td><td class="px-4 py-3 text-slate-600">05/09/2018</td><td class="px-4 py-3 text-slate-600">Amil</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Lucas Henrique Oliveira</a></td><td class="px-4 py-3 text-slate-600">111.444.777-35</td><td class="px-4 py-3 text-slate-600">21/11/2015</td><td class="px-4 py-3 text-slate-600">IPASGO</td></tr>
+<tr class="border-b hover:bg-slate-50"><td class="px-4 py-3"><a href="paciente-ficha.html" class="font-medium text-slate-800 hover:text-emerald-700">Miguel Santos Pereira</a></td><td class="px-4 py-3 text-slate-600">357.951.852-64</td><td class="px-4 py-3 text-slate-600">19/05/1975</td><td class="px-4 py-3 text-slate-600">Bradesco</td></tr>
+</tbody></table>
   </div>
-  <form class="flex gap-2" onsubmit="event.preventDefault()">
-    <input placeholder="Buscar por nome ou CPF" class="h-10 max-w-md flex-1 rounded-md border border-slate-200 bg-white px-3 text-sm">
-    <button class="inline-flex h-10 items-center rounded-md border border-slate-200 bg-white px-4 text-sm hover:bg-slate-100">Buscar</button>
-  </form>
-  <section class="rounded-xl border bg-white shadow">
-    <div class="w-full overflow-auto">
-      <table class="w-full text-sm">
-        <thead><tr class="border-b text-left text-slate-500">
-          <th class="h-12 px-4 font-medium">Nome</th><th class="h-12 px-4 font-medium">CPF</th><th class="h-12 px-4 font-medium">Nascimento</th><th class="h-12 px-4 font-medium">Telefone</th><th class="h-12 px-4 font-medium">Convênio</th>
-        </tr></thead>
-        <tbody>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Ana Clara Rodrigues</a></td><td class="p-4">153.509.460-56</td><td class="p-4">08/07/1992</td><td class="p-4">(62) 99911-1002</td><td class="p-4">Unimed</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Arthur Freitas Carvalho</a></td><td class="p-4">951.753.852-91</td><td class="p-4">03/07/1972</td><td class="p-4">(62) 99911-1015</td><td class="p-4">SulAmérica</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Beatriz Martins Costa</a></td><td class="p-4">935.411.347-80</td><td class="p-4">30/01/2001</td><td class="p-4">(62) 99911-1004</td><td class="p-4">Particular</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Clara Tavares Lopes</a></td><td class="p-4">456.753.951-64</td><td class="p-4">29/11/1949</td><td class="p-4">(62) 99911-1018</td><td class="p-4">IPASGO</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Davi Martins Faria</a></td><td class="p-4">147.258.369-82</td><td class="p-4">25/05/1990</td><td class="p-4">(62) 99911-1019</td><td class="p-4">Particular</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Enzo Gabriel Souza</a></td><td class="p-4">951.456.753-64</td><td class="p-4">06/01/2020</td><td class="p-4">(62) 99911-1017</td><td class="p-4">Amil</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Gabriel Nunes Barbosa</a></td><td class="p-4">456.789.123-64</td><td class="p-4">17/08/1983</td><td class="p-4">(62) 99911-1009</td><td class="p-4">Unimed</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Helena Cardoso Teixeira</a></td><td class="p-4">741.852.963-55</td><td class="p-4">24/02/1958</td><td class="p-4">(62) 99911-1010</td><td class="p-4">IPASGO</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Isabela Moreira Fernandes</a></td><td class="p-4">963.741.852-00</td><td class="p-4">09/10/1995</td><td class="p-4">(62) 99911-1012</td><td class="p-4">Particular</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">João Pedro da Silva</a></td><td class="p-4">529.982.247-25</td><td class="p-4">14/03/1988</td><td class="p-4">(62) 99911-1001</td><td class="p-4">Particular</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Laura Vitória Almeida</a></td><td class="p-4">987.654.321-00</td><td class="p-4">05/09/2018</td><td class="p-4">(62) 99911-1006</td><td class="p-4">Amil</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Lívia Gomes Nascimento</a></td><td class="p-4">369.258.147-55</td><td class="p-4">31/08/2003</td><td class="p-4">(62) 99911-1020</td><td class="p-4">Unimed</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Lucas Henrique Oliveira</a></td><td class="p-4">111.444.777-35</td><td class="p-4">21/11/2015</td><td class="p-4">(62) 99911-1003</td><td class="p-4">IPASGO</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Manuela Batista Araújo</a></td><td class="p-4">753.951.456-64</td><td class="p-4">15/09/1986</td><td class="p-4">(62) 99911-1016</td><td class="p-4">Particular</td></tr>
-          <tr class="border-b hover:bg-slate-50"><td class="p-4"><a href="paciente-ficha.html" class="font-medium text-slate-900 hover:underline">Matheus Ribeiro Gomes</a></td><td class="p-4">852.963.741-00</td><td class="p-4">13/06/2007</td><td class="p-4">(62) 99911-1011</td><td class="p-4">Amil</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  <div class="flex items-center justify-between text-sm text-slate-600">
-    <span>20 pacientes — página 1 de 2</span>
-    <div class="flex gap-2"><span class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-slate-300">Anterior</span><a href="#" class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 hover:bg-slate-100">Próxima</a></div>
-  </div>
-</div>
-</template>
+  <p class="text-sm text-slate-500">20 pacientes — página 1 de 2</p>
+</div></template>
 <script src="app.js"></script>
 <script>renderShell("pacientes.html");</script>
 </body>

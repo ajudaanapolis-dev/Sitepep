@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimentos do dia — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+<template id="page-content">
+<div class="border-b bg-white px-6 py-5"><div class="flex items-start justify-between gap-4"><div><h1 class="text-3xl font-bold text-slate-900">Atendimentos do dia</h1><p class="mt-0.5 text-sm text-slate-400">Atendimento</p></div><button class="rounded-lg bg-emerald-200 px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-300">Atender sem agendamento</button></div></div>
+<div class="space-y-4 p-6">
+  <div class="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">⚠ Existe 1 atendimento em andamento: <a class="font-semibold text-emerald-700">Henrique Gabriel Santos Dias</a>.</div>
+  <div class="flex items-center gap-2">
+    <input value="19/06/2026" class="h-12 flex-1 rounded-lg border border-slate-200 px-4 text-sm">
+    <button class="h-12 w-12 rounded-lg border border-slate-200">📅</button>
+  </div>
+  <div class="flex gap-2">
+    <button class="h-11 w-11 rounded-lg border border-slate-200">‹</button>
+    <button class="h-11 w-11 rounded-lg border border-slate-200">›</button>
+    <button class="h-11 rounded-lg border border-slate-200 px-4 text-sm text-slate-400">Hoje</button>
+  </div>
+  <div class="rounded-xl border bg-white p-5 shadow-sm">
+    <div class="space-y-3 text-sm">
+      <div class="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+        <div><p class="font-semibold text-slate-800">08:00 · João Pedro da Silva</p><p class="text-xs text-slate-500">14/03/1988 · Consulta · Particular</p></div>
+        <a href="atendimento.html" class="rounded-md bg-emerald-200 px-3 py-1.5 text-xs font-medium text-emerald-900">Atender</a>
+      </div>
+      <div class="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+        <div><p class="font-semibold text-slate-800">09:00 · Ana Clara Rodrigues</p><p class="text-xs text-slate-500">08/07/1992 · Retorno · Unimed</p></div>
+        <a href="atendimento.html" class="rounded-md bg-emerald-200 px-3 py-1.5 text-xs font-medium text-emerald-900">Atender</a>
+      </div>
+      <div class="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
+        <div><p class="font-semibold text-slate-800">10:00 · Lucas Henrique Oliveira</p><p class="text-xs text-slate-500">21/11/2015 · Consulta · IPASGO</p></div>
+        <a href="atendimento.html" class="rounded-md bg-emerald-200 px-3 py-1.5 text-xs font-medium text-emerald-900">Atender</a>
+      </div>
+    </div>
+  </div>
+</div></template>
+<script src="app.js"></script>
+<script>renderShell("atendimentos-dia.html");</script>
+</body>
+</html>

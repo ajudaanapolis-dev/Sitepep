@@ -9,72 +9,168 @@
 <body class="bg-slate-50">
 <template id="page-content">
 
-<div class="space-y-6">
-  <header class="rounded-xl border bg-white p-6 shadow">
-    <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
-      <h1 class="text-2xl font-semibold text-slate-900">João Pedro da Silva</h1>
-      <span class="text-sm text-slate-500">Consulta de 15/06/2026 08:00 · Em atendimento</span>
-    </div>
-    <p class="mt-1 text-sm text-slate-600">38 anos · CPF 529.982.247-25 · Particular · Profissional: Dra. Mariana Alves</p>
-    <div class="mt-4 space-y-2">
-      <div class="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700"><strong>Alergias:</strong> Dipirona</div>
-      <div class="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800"><strong>Medicamentos em uso:</strong> Losartana 50mg</div>
-    </div>
-  </header>
-  <div class="grid gap-6 xl:grid-cols-3">
-    <div class="space-y-6 xl:col-span-2">
-      <section class="rounded-xl border bg-white p-6 shadow">
-        <h2 class="text-lg font-semibold text-teal-800">Evolução clínica</h2>
-        <div class="mt-4 space-y-4">
-          <div class="space-y-2"><label class="text-sm font-medium">Queixa principal</label><textarea class="min-h-16 w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-600" placeholder="Motivo da consulta, nas palavras do paciente...">Cefaleia há 3 dias.</textarea></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Anamnese</label><textarea class="min-h-24 w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-600" placeholder="História da doença atual, antecedentes, hábitos...">Dor em região frontal, em peso, sem náuseas ou fotofobia. Nega febre. Refere estresse no trabalho e sono irregular. Sem episódios semelhantes prévios.</textarea></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Exame físico</label><textarea class="min-h-24 w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-600" placeholder="Achados do exame físico...">BEG, corado, hidratado, afebril. ACV: RCR 2T, sem sopros. AR: MV+ sem RA. Neuro: sem déficits focais, pupilas isocóricas e fotorreagentes.</textarea></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Hipótese diagnóstica (HD)</label><textarea class="min-h-16 w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-600" placeholder="Hipóteses diagnósticas...">Cefaleia tensional.</textarea></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Conduta (CD)</label><textarea class="min-h-16 w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-600" placeholder="Conduta, prescrição, orientações, retorno...">Analgésico se dor. Orientações de higiene do sono e manejo de estresse. Retorno em 15 dias ou antes se piora.</textarea></div>
-        </div>
-      </section>
-      <section class="rounded-xl border bg-white p-6 shadow">
-        <h2 class="text-lg font-semibold text-teal-800">Sinais vitais</h2>
-        <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3">
-          <div class="space-y-2"><label class="text-sm font-medium">PA (mmHg)</label><input value="120/80" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-          <div class="space-y-2"><label class="text-sm font-medium">FC (bpm)</label><input value="72" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-          <div class="space-y-2"><label class="text-sm font-medium">FR (irpm)</label><input value="16" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Temperatura (°C)</label><input value="36.5" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Peso (kg)</label><input value="70" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-          <div class="space-y-2"><label class="text-sm font-medium">Altura (m)</label><input value="1.70" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-        </div>
-        <div class="mt-4 rounded-md border border-teal-200 bg-teal-50 px-3 py-2 text-sm text-teal-900"><strong>IMC:</strong> 24,2 — Peso normal</div>
-      </section>
-      <section class="rounded-xl border bg-white p-6 shadow">
-        <h2 class="text-lg font-semibold text-teal-800">Diagnósticos (CID-10)</h2>
-        <div class="mt-4 space-y-2">
-          <div class="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm"><span><strong>R51</strong> — Cefaleia</span><button class="text-xs text-slate-500 hover:underline">Inativar</button></div>
-        </div>
-        <div class="mt-4 space-y-2"><label class="text-sm font-medium">Adicionar diagnóstico</label><input placeholder="Busque por código (J00) ou descrição (faringite)" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm focus:ring-2 focus:ring-teal-600"></div>
-      </section>
-      <section class="rounded-xl border bg-white p-6 shadow">
-        <h2 class="text-lg font-semibold text-teal-800">Prescrição e documentos</h2>
-        <p class="mt-1 text-sm text-slate-600">Emita receituário, atestados e declarações para esta consulta.</p>
-        <a href="prescricao.html" class="mt-3 inline-flex h-10 items-center rounded-md bg-teal-700 px-4 text-sm font-medium text-white hover:bg-teal-800">Abrir prescrição e documentos</a>
-      </section>
-      <div class="flex flex-wrap gap-3">
-        <button class="inline-flex h-10 items-center rounded-md border border-slate-200 bg-white px-4 text-sm">Salvar rascunho</button>
-        <button class="inline-flex h-10 items-center rounded-md bg-teal-700 px-4 text-sm font-medium text-white hover:bg-teal-800">Assinar evolução</button>
+<div class="border-b bg-white px-6 py-4">
+  <p class="text-sm text-slate-400">Atendimento / Atendimentos do dia / Prontuário de Henrique Gabriel</p>
+  <div class="mt-3 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+    <div class="flex items-center gap-3">
+      <div class="h-14 w-14 rounded-full bg-slate-200"></div>
+      <div>
+        <p class="text-lg font-bold text-slate-900">Henrique Gabriel Santos Dias</p>
+        <p class="text-sm text-slate-500">13 anos, 1 mês e 3 dias (16/05/2013)</p>
+        <p class="text-sm"><a class="text-emerald-700">Anexos</a> &nbsp; <a class="text-emerald-700">Histórico completo</a></p>
       </div>
-      <p class="text-xs text-slate-500">Ao assinar, a evolução torna-se imutável e a consulta é finalizada. Correções posteriores geram nova versão, preservando a original.</p>
     </div>
-    <div class="space-y-6">
-      <section class="rounded-xl border bg-white p-6 shadow">
-        <h2 class="text-lg font-semibold text-teal-800">Evoluções anteriores</h2>
-        <div class="mt-4 space-y-2">
-          <details class="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm"><summary class="cursor-pointer"><span class="font-medium">08/06/2026 · v1 · Assinada</span><span class="block text-xs text-slate-500">Dra. Mariana Alves</span></summary><div class="mt-2 border-t pt-2 text-xs text-slate-700"><p><strong>Queixa:</strong> Retorno de rotina.</p><p><strong>HD:</strong> Hipertensão controlada.</p><p><strong>CD:</strong> Manter medicação.</p></div></details>
-        </div>
-      </section>
+    <div class="flex flex-wrap items-center gap-2">
+      <button class="rounded-lg bg-red-50 px-3 py-2.5 text-red-500">✕</button>
+      <button class="rounded-lg bg-slate-100 px-4 py-2.5 text-sm font-medium text-slate-700">✎ Salvar rascunho</button>
+      <button class="rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-600">✓ Finalizar atendimento</button>
     </div>
   </div>
 </div>
+<div class="gap-6 p-6 lg:flex">
+  <aside class="mb-6 lg:mb-0 lg:w-64 lg:flex-shrink-0">
+    <div class="rounded-xl border bg-white p-4 shadow-sm">
+      <p class="mb-3 font-bold text-slate-800">Seções</p>
+      <nav class="space-y-0.5"><a href="#procedimento" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Procedimento</a>
+<a href="#queixa-principal" class="block rounded-md px-3 py-2.5 text-sm bg-emerald-50 font-medium text-emerald-800">Queixa principal</a>
+<a href="#anamnese" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Anamnese</a>
+<a href="#conduta" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Conduta</a>
+<a href="#solicitação-de-exames" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Solicitação de exames</a>
+<a href="#laudo" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Laudo</a>
+<a href="#prescrição" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Prescrição</a>
+<a href="#atestado" class="block rounded-md px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50">Atestado</a>
+</nav>
+      <button class="mt-3 w-full rounded-md border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-500">+ Adicionar seções</button>
+    </div>
+  </aside>
+  <div class="flex-1 space-y-6"><section id="plano-de-convênio" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Plano de convênio</h2></div>
+      <input value="Particular" class="h-11 w-full rounded-lg border border-slate-200 px-3 text-sm">
+    </section><section id="procedimento" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Procedimento</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="mb-4 flex gap-4 border-b text-sm"><span class="border-b-2 border-emerald-500 pb-2 font-medium text-emerald-700">Procedimentos (0)</span><span class="pb-2 text-slate-400">Produtos (0)</span></div>
+<div class="flex flex-wrap gap-2"><button class="rounded-md bg-slate-100 px-4 py-2 text-sm">Importar de pacote</button><button class="rounded-md bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800">+ Adicionar procedimento</button></div>
+<div class="mt-4 rounded-md border border-slate-200 p-6 text-center text-sm text-slate-400">Nenhum procedimento adicionado</div>
+    </section><section id="queixa-principal" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Queixa principal</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="rounded-lg border border-slate-200">
+      <div class="flex flex-wrap items-center gap-2 border-b px-3 py-2 text-sm text-slate-500">
+        <span class="rounded px-2 py-1 hover:bg-slate-100">Parágrafo ▾</span>
+        <span class="font-bold">B</span><span class="italic">I</span><span class="underline">U</span><span class="line-through">S</span>
+      </div>
+      <textarea class="min-h-32 w-full rounded-b-lg px-3 py-2 text-sm focus:outline-none" placeholder="Motivo da consulta..."></textarea>
+    </div>
+    <p class="mt-1 text-xs text-slate-400">Caracteres: 0 &nbsp; Limite: 65535</p>
+    </section><section id="anamnese" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Anamnese</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <label class="text-sm text-slate-500">Modelo de anamnese</label><input class="mb-3 mt-1 h-11 w-full rounded-lg border border-slate-200 px-3 text-sm"><div class="rounded-lg border border-slate-200">
+      <div class="flex flex-wrap items-center gap-2 border-b px-3 py-2 text-sm text-slate-500">
+        <span class="rounded px-2 py-1 hover:bg-slate-100">Parágrafo ▾</span>
+        <span class="font-bold">B</span><span class="italic">I</span><span class="underline">U</span><span class="line-through">S</span>
+      </div>
+      <textarea class="min-h-32 w-full rounded-b-lg px-3 py-2 text-sm focus:outline-none" placeholder="História da doença atual, antecedentes..."></textarea>
+    </div>
+    <p class="mt-1 text-xs text-slate-400">Caracteres: 0 &nbsp; Limite: 65535</p>
+    </section><section id="conduta" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Conduta</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="rounded-lg border border-slate-200">
+      <div class="flex flex-wrap items-center gap-2 border-b px-3 py-2 text-sm text-slate-500">
+        <span class="rounded px-2 py-1 hover:bg-slate-100">Parágrafo ▾</span>
+        <span class="font-bold">B</span><span class="italic">I</span><span class="underline">U</span><span class="line-through">S</span>
+      </div>
+      <textarea class="min-h-32 w-full rounded-b-lg px-3 py-2 text-sm focus:outline-none" placeholder="Conduta, orientações, retorno..."></textarea>
+    </div>
+    <p class="mt-1 text-xs text-slate-400">Caracteres: 0 &nbsp; Limite: 65535</p>
+    </section><section id="solicitação-de-exames" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Solicitação de exames</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="rounded-lg bg-slate-50 p-4">
+  <div class="rounded-lg border bg-white p-5">
+    <p class="text-center font-semibold text-slate-800">Solicitação de exames</p>
+    <div class="mt-3 text-sm text-slate-700">ELETROENCEFALOGRAMA</div>
+  </div>
+  <div class="mt-4 flex flex-wrap justify-end gap-2">
+    <button class="inline-flex items-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-sm">✎ Editar solicitação de exames</button>
+    <button class="inline-flex items-center gap-1 rounded-md bg-emerald-200 px-4 py-2 text-sm font-medium text-emerald-900">🖨 Imprimir solicitação de exames</button>
+  </div>
+</div><div class="mt-3"><button class="rounded-md bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800">+ Adicionar solicitação de exames</button></div>
+    </section><section id="laudo" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Laudo</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <label class="text-sm text-slate-500">Título do laudo</label><input placeholder="Laudo" class="mb-3 mt-1 h-11 w-full rounded-lg border border-slate-200 px-3 text-sm"><div class="rounded-lg border border-slate-200">
+      <div class="flex flex-wrap items-center gap-2 border-b px-3 py-2 text-sm text-slate-500">
+        <span class="rounded px-2 py-1 hover:bg-slate-100">Parágrafo ▾</span>
+        <span class="font-bold">B</span><span class="italic">I</span><span class="underline">U</span><span class="line-through">S</span>
+      </div>
+      <textarea class="min-h-32 w-full rounded-b-lg px-3 py-2 text-sm focus:outline-none" placeholder="..."></textarea>
+    </div>
+    <p class="mt-1 text-xs text-slate-400">Caracteres: 0 &nbsp; Limite: 65535</p><div class="mt-3 flex justify-end gap-2"><button class="rounded-md bg-slate-100 px-4 py-2 text-sm">Personalizar documento</button><button class="rounded-md bg-emerald-200 px-4 py-2 text-sm font-medium text-emerald-900">Salvar e imprimir</button></div>
+    </section><section id="prescrição" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Prescrição</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="rounded-lg bg-slate-50 p-4">
+  <div class="rounded-lg border bg-white p-5">
+    <p class="text-center font-semibold text-slate-800">Prescrição</p>
+    <div class="mt-3 text-sm text-slate-700"><p class="text-xs text-slate-400 mb-2">Data da prescrição</p><p>1. <strong>Dipirona 500mg</strong>, Comprimido<br><span class="text-slate-600">Tomar 1 comprimido, via oral, 6/6h por 3 dias.</span></p></div>
+  </div>
+  <div class="mt-4 flex flex-wrap justify-end gap-2">
+    <button class="inline-flex items-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-sm">✎ Editar prescrição</button>
+    <button class="inline-flex items-center gap-1 rounded-md bg-emerald-200 px-4 py-2 text-sm font-medium text-emerald-900">🖨 Imprimir prescrição</button>
+  </div>
+</div><div class="mt-3"><button class="rounded-md bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800">+ Adicionar prescrição</button></div>
+    </section><section id="atestado" class="rounded-xl border bg-white p-6 shadow-sm">
+      <div class="mb-4 flex items-center justify-between"><h2 class="text-base font-bold text-slate-800">Atestado</h2><div class="flex items-center gap-1">
+      <button class="rounded-md bg-red-50 p-2 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></button>
+      <button class="rounded-md bg-slate-100 p-2 text-slate-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+      <button class="rounded-md bg-emerald-50 p-2 text-emerald-600"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+    </div></div>
+      <div class="rounded-lg bg-slate-50 p-4">
+  <div class="rounded-lg border bg-white p-5">
+    <p class="text-center font-semibold text-slate-800">Atestado</p>
+    <div class="mt-3 text-sm text-slate-700">Atesto para os devidos fins, a pedido do interessado, que o paciente esteve sob meus cuidados em 15/06/2026 e deverá permanecer em repouso por 2 dias. CID 10: R51</div>
+  </div>
+  <div class="mt-4 flex flex-wrap justify-end gap-2">
+    <button class="inline-flex items-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-sm">✎ Editar atestado</button>
+    <button class="inline-flex items-center gap-1 rounded-md bg-emerald-200 px-4 py-2 text-sm font-medium text-emerald-900">🖨 Imprimir atestado</button>
+  </div>
+</div><div class="mt-3"><button class="rounded-md bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800">+ Adicionar atestado</button></div>
+    </section></div>
+</div>
 </template>
 <script src="app.js"></script>
-<script>renderShell("agenda.html");</script>
+<script>renderShell("atendimentos-dia.html");</script>
 </body>
 </html>
