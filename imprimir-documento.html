@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atestado Médico</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>@media print { .no-print { display: none !important; } @page { margin: 2cm; } }</style>
+</head>
+<body class="bg-white">
+<div class="mx-auto max-w-3xl space-y-6 p-8 text-slate-900">
+  <header class="border-b pb-4 text-center">
+    <h1 class="text-xl font-bold">Clínica PEP</h1>
+    <p class="text-sm text-slate-600">Rua Exemplo, 123 — Centro — Anápolis/GO</p>
+    <p class="text-sm text-slate-600">(62) 0000-0000</p>
+  </header>
+  <h2 class="text-center text-lg font-semibold">Atestado Médico</h2>
+  <div class="text-sm"><p><strong>Paciente:</strong> João Pedro da Silva — CPF 529.982.247-25</p></div>
+  <p class="text-justify leading-relaxed">Atesto, para os devidos fins, que João Pedro da Silva esteve sob meus cuidados médicos nesta data, necessitando de 2 dia(s) de afastamento de suas atividades (CID R51).</p>
+  <p class="text-sm">Data: 15/06/2026</p>
+  <div class="mt-16 text-center text-sm"><div class="mx-auto w-64 border-t border-slate-400 pt-1">Assinatura e carimbo do profissional</div></div>
+  <div class="flex justify-center pt-6">
+    <button onclick="window.print()" class="no-print inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white">Imprimir / Salvar PDF</button>
+  </div>
+  <p class="no-print text-center text-xs text-slate-400"><a href="paciente-ficha.html" class="underline">← Voltar à ficha</a></p>
+</div>
+</body>
+</html>

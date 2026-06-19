@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica PEP — Entrar</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<main class="flex min-h-screen items-center justify-center px-4">
+  <div class="w-full max-w-md rounded-xl border bg-white shadow">
+    <div class="flex flex-col space-y-1.5 p-6">
+      <h3 class="text-2xl font-semibold tracking-tight">Entrar na Clínica PEP</h3>
+      <p class="text-sm text-slate-500">Informe suas credenciais para acessar o sistema.</p>
+    </div>
+    <div class="p-6 pt-0">
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';" class="space-y-4">
+        <div class="space-y-2">
+          <label class="text-sm font-medium" for="email">E-mail</label>
+          <input id="email" type="email" value="admin@pep.local" class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950" placeholder="seu@email.com">
+        </div>
+        <div class="space-y-2">
+          <label class="text-sm font-medium" for="senha">Senha</label>
+          <input id="senha" type="password" value="senha123" class="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-950" placeholder="Digite sua senha">
+        </div>
+        <button type="submit" class="inline-flex h-10 w-full items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Entrar</button>
+      </form>
+      <p class="mt-4 text-center text-xs text-slate-400">Protótipo de layout — dados fictícios</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>

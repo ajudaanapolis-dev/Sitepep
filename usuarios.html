@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuários — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+
+<div class="space-y-6">
+  <form class="rounded-xl border bg-white p-6 shadow">
+    <h2 class="text-lg font-semibold">Criar usuário</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-2">
+      <div class="space-y-2"><label class="text-sm font-medium">Nome</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-2"><label class="text-sm font-medium">E-mail</label><input type="email" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-2"><label class="text-sm font-medium">Senha</label><input type="password" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-2"><label class="text-sm font-medium">Papel</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>ADMIN</option><option>MEDICO</option><option>RECEPCAO</option></select></div>
+      <div class="space-y-2 md:col-span-2"><label class="text-sm font-medium">CRM</label><input placeholder="Obrigatório apenas para médicos, se aplicável" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+    </div>
+    <button class="mt-4 inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white">Criar usuário</button>
+  </form>
+  <section class="rounded-xl border bg-white p-6 shadow">
+    <h1 class="text-xl font-semibold">Usuários</h1>
+    <div class="mt-4 w-full overflow-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="border-b text-left text-slate-500"><th class="h-12 px-4 font-medium">Nome</th><th class="h-12 px-4 font-medium">E-mail</th><th class="h-12 px-4 font-medium">Papel</th><th class="h-12 px-4 font-medium">CRM</th><th class="h-12 px-4 font-medium">Status</th><th class="h-12 px-4 font-medium">Ação</th></tr></thead>
+        <tbody>
+          <tr class="border-b"><td class="p-4">Administrador PEP</td><td class="p-4">admin@pep.local</td><td class="p-4">ADMIN</td><td class="p-4">-</td><td class="p-4">Ativo</td><td class="p-4"><button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Desativar</button></td></tr>
+          <tr class="border-b"><td class="p-4">Dra. Mariana Alves</td><td class="p-4">mariana.alves@pep.local</td><td class="p-4">MEDICO</td><td class="p-4">CRM-GO 12345</td><td class="p-4">Ativo</td><td class="p-4"><button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Desativar</button></td></tr>
+          <tr class="border-b"><td class="p-4">Dr. Rafael Monteiro</td><td class="p-4">rafael.monteiro@pep.local</td><td class="p-4">MEDICO</td><td class="p-4">CRM-GO 23456</td><td class="p-4">Ativo</td><td class="p-4"><button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Desativar</button></td></tr>
+          <tr class="border-b"><td class="p-4">Recepção Clínica</td><td class="p-4">recepcao@pep.local</td><td class="p-4">RECEPCAO</td><td class="p-4">-</td><td class="p-4">Ativo</td><td class="p-4"><button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Desativar</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+</template>
+<script src="app.js"></script>
+<script>renderShell("usuarios.html");</script>
+</body>
+</html>

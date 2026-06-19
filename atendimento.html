@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimento — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+
+<div class="space-y-6">
+  <header class="rounded-xl border bg-white p-6 shadow">
+    <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+      <h1 class="text-2xl font-semibold">João Pedro da Silva</h1>
+      <span class="text-sm text-slate-500">Consulta de 15/06/2026 08:00 · Em atendimento</span>
+    </div>
+    <p class="mt-1 text-sm text-slate-600">38 anos · CPF 529.982.247-25 · Particular · Profissional: Dra. Mariana Alves</p>
+    <div class="mt-4 space-y-2">
+      <div class="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700"><strong>Alergias:</strong> Dipirona</div>
+      <div class="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800"><strong>Medicamentos em uso:</strong> Losartana 50mg</div>
+    </div>
+  </header>
+  <div class="grid gap-6 xl:grid-cols-3">
+    <div class="space-y-6 xl:col-span-2">
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Evolução (SOAP)</h2>
+        <div class="mt-4 space-y-4">
+          <div class="space-y-2"><label class="text-sm font-medium">Subjetivo</label><textarea class="min-h-20 w-full rounded-md border border-slate-200 px-3 py-2 text-sm" placeholder="Queixas, história relatada pelo paciente...">Paciente relata cefaleia há 3 dias, sem febre.</textarea></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Objetivo</label><textarea class="min-h-20 w-full rounded-md border border-slate-200 px-3 py-2 text-sm" placeholder="Exame físico, achados objetivos...">Bom estado geral, corado, hidratado. ACV: RCR 2T sem sopros.</textarea></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Avaliação</label><textarea class="min-h-20 w-full rounded-md border border-slate-200 px-3 py-2 text-sm" placeholder="Hipóteses diagnósticas...">Cefaleia tensional.</textarea></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Plano</label><textarea class="min-h-20 w-full rounded-md border border-slate-200 px-3 py-2 text-sm" placeholder="Conduta, exames, orientações...">Analgesia, orientações de sono. Retorno se persistir.</textarea></div>
+        </div>
+      </section>
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Sinais vitais</h2>
+        <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3">
+          <div class="space-y-2"><label class="text-sm font-medium">PA (mmHg)</label><input value="120/80" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+          <div class="space-y-2"><label class="text-sm font-medium">FC (bpm)</label><input value="72" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+          <div class="space-y-2"><label class="text-sm font-medium">FR (irpm)</label><input value="16" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Temperatura (°C)</label><input value="36.5" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Peso (kg)</label><input value="70" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+          <div class="space-y-2"><label class="text-sm font-medium">Altura (m)</label><input value="1.70" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        </div>
+        <div class="mt-4 rounded-md border border-sky-200 bg-sky-50 px-3 py-2 text-sm text-sky-900"><strong>IMC:</strong> 24,2 — Peso normal</div>
+      </section>
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Diagnósticos (CID-10)</h2>
+        <div class="mt-4 space-y-2">
+          <div class="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm"><span><strong>R51</strong> — Cefaleia</span><button class="text-xs text-slate-500 hover:underline">Inativar</button></div>
+        </div>
+        <div class="mt-4 space-y-2"><label class="text-sm font-medium">Adicionar diagnóstico</label><input placeholder="Busque por código (J00) ou descrição (faringite)" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      </section>
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Prescrição e documentos</h2>
+        <p class="mt-1 text-sm text-slate-600">Emita receituário, atestados e declarações para esta consulta.</p>
+        <a href="prescricao.html" class="mt-3 inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white">Abrir prescrição e documentos</a>
+      </section>
+      <div class="flex flex-wrap gap-3">
+        <button class="inline-flex h-10 items-center rounded-md border border-slate-200 bg-white px-4 text-sm">Salvar rascunho</button>
+        <button class="inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white">Assinar evolução</button>
+      </div>
+      <p class="text-xs text-slate-500">Ao assinar, a evolução torna-se imutável e a consulta é finalizada. Correções posteriores geram nova versão, preservando a original.</p>
+    </div>
+    <div class="space-y-6">
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Evoluções anteriores</h2>
+        <div class="mt-4 space-y-2">
+          <details class="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm"><summary class="cursor-pointer"><span class="font-medium">08/06/2026 · v1 · Assinada</span><span class="block text-xs text-slate-500">Dra. Mariana Alves</span></summary><div class="mt-2 border-t pt-2 text-xs text-slate-700"><p><strong>S:</strong> Retorno de rotina.</p><p><strong>A:</strong> Hipertensão controlada.</p><p><strong>P:</strong> Manter medicação.</p></div></details>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</template>
+<script src="app.js"></script>
+<script>renderShell("agenda.html");</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prescrição — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+
+<div class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-2xl font-semibold">Prescrição e documentos — João Pedro da Silva</h1>
+    <a href="atendimento.html" class="inline-flex h-10 items-center rounded-md border border-slate-200 bg-white px-4 text-sm hover:bg-slate-100">Voltar ao atendimento</a>
+  </div>
+  <section class="rounded-xl border bg-white p-6 shadow">
+    <h2 class="text-lg font-semibold">Prescrição</h2>
+    <div class="mt-4 grid gap-3 rounded-md border border-slate-200 p-3 md:grid-cols-12">
+      <div class="space-y-1 md:col-span-4"><label class="text-sm font-medium">Medicamento</label><input value="Dipirona 500mg" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-1 md:col-span-2"><label class="text-sm font-medium">Dose</label><input value="1 cp" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-1 md:col-span-2"><label class="text-sm font-medium">Via</label><select class="h-10 w-full rounded-md border border-slate-200 px-2 text-sm"><option>Oral</option></select></div>
+      <div class="space-y-1 md:col-span-2"><label class="text-sm font-medium">Frequência</label><input value="6/6h" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-1 md:col-span-1"><label class="text-sm font-medium">Duração</label><input value="3 dias" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="flex items-end md:col-span-1"></div>
+    </div>
+    <div class="mt-4 flex gap-2">
+      <button class="inline-flex h-9 items-center rounded-md border border-slate-200 bg-white px-3 text-sm">Adicionar medicamento</button>
+      <button class="inline-flex h-9 items-center rounded-md bg-slate-900 px-3 text-sm text-white">Salvar prescrição</button>
+    </div>
+  </section>
+  <section class="rounded-xl border bg-white p-6 shadow">
+    <h2 class="text-lg font-semibold">Atestado / Declaração</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <div class="space-y-2"><label class="text-sm font-medium">Tipo</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>Atestado</option><option>Declaração</option></select></div>
+      <div class="space-y-2"><label class="text-sm font-medium">Dias de afastamento</label><input type="number" value="2" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      <div class="space-y-2"><label class="text-sm font-medium">CID (opcional)</label><input value="R51" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+    </div>
+    <div class="mt-4 space-y-2"><label class="text-sm font-medium">Texto livre (opcional)</label><textarea class="min-h-20 w-full rounded-md border border-slate-200 px-3 py-2 text-sm" placeholder="Deixe em branco para usar o texto padrão."></textarea></div>
+    <button class="mt-4 inline-flex h-9 items-center rounded-md bg-slate-900 px-3 text-sm text-white">Emitir documento</button>
+  </section>
+</div>
+</template>
+<script src="app.js"></script>
+<script>renderShell("agenda.html");</script>
+</body>
+</html>

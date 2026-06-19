@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novo paciente — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+<div class="space-y-6">
+  <h1 class="text-2xl font-semibold">Novo paciente</h1>
+  <form class="space-y-6" onsubmit="event.preventDefault(); window.location.href='paciente-ficha.html';">
+    <fieldset class="rounded-xl border bg-white p-6 shadow">
+      <legend class="px-2 text-sm font-semibold text-slate-700">Dados pessoais</legend>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="space-y-2 md:col-span-2"><label class="text-sm font-medium">Nome completo *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">CPF *</label><input placeholder="000.000.000-00" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Data de nascimento *</label><input type="date" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Sexo *</label><select class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"><option>Masculino</option><option>Feminino</option><option>Outro</option></select></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Telefone *</label><input placeholder="(00) 00000-0000" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">E-mail</label><input type="email" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Convênio</label><input placeholder="Deixe vazio para Particular" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      </div>
+    </fieldset>
+    <fieldset class="rounded-xl border bg-white p-6 shadow">
+      <legend class="px-2 text-sm font-semibold text-slate-700">Endereço</legend>
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="space-y-2 md:col-span-2"><label class="text-sm font-medium">Logradouro *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Número *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Complemento</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Bairro *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Cidade *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Estado (UF) *</label><input maxlength="2" placeholder="GO" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">CEP *</label><input placeholder="00000-000" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      </div>
+    </fieldset>
+    <fieldset class="rounded-xl border bg-white p-6 shadow">
+      <legend class="px-2 text-sm font-semibold text-slate-700">Contato de emergência</legend>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="space-y-2"><label class="text-sm font-medium">Nome *</label><input class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+        <div class="space-y-2"><label class="text-sm font-medium">Telefone *</label><input placeholder="(00) 00000-0000" class="h-10 w-full rounded-md border border-slate-200 px-3 text-sm"></div>
+      </div>
+    </fieldset>
+    <div class="rounded-xl border bg-white p-6 shadow">
+      <label class="flex items-start gap-3 text-sm text-slate-700">
+        <input type="checkbox" class="mt-1 h-4 w-4">
+        <span><strong>Consentimento LGPD *</strong> — Declaro que o paciente (ou seu responsável legal) autoriza o tratamento dos seus dados pessoais e de saúde por esta clínica, exclusivamente para finalidades de assistência à saúde, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</span>
+      </label>
+    </div>
+    <button type="submit" class="inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white hover:bg-slate-800">Cadastrar paciente</button>
+  </form>
+</div>
+</template>
+<script src="app.js"></script>
+<script>renderShell("pacientes.html");</script>
+</body>
+</html>

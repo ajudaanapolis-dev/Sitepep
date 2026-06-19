@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+
+<div class="space-y-6">
+  <h1 class="text-2xl font-semibold">Auditoria (LGPD)</h1>
+  <form class="grid gap-3 rounded-xl border bg-white p-4 shadow md:grid-cols-5">
+    <div><label class="text-xs text-slate-600">Usuário</label><select class="h-9 w-full rounded-md border border-slate-200 px-2 text-sm"><option>Todos</option></select></div>
+    <div><label class="text-xs text-slate-600">Entidade</label><select class="h-9 w-full rounded-md border border-slate-200 px-2 text-sm"><option>Todas</option><option>Paciente</option><option>Evolução</option></select></div>
+    <div><label class="text-xs text-slate-600">De</label><input type="date" class="h-9 w-full rounded-md border border-slate-200 px-2 text-sm"></div>
+    <div><label class="text-xs text-slate-600">Até</label><input type="date" class="h-9 w-full rounded-md border border-slate-200 px-2 text-sm"></div>
+    <div class="flex items-end"><button class="h-9 w-full rounded-md border border-slate-200 bg-white px-3 text-sm">Filtrar</button></div>
+  </form>
+  <section class="rounded-xl border bg-white shadow">
+    <div class="w-full overflow-auto"><table class="w-full text-sm">
+      <thead><tr class="border-b text-left text-slate-500"><th class="h-12 px-4 font-medium">Data/Hora</th><th class="h-12 px-4 font-medium">Usuário</th><th class="h-12 px-4 font-medium">Ação</th><th class="h-12 px-4 font-medium">Entidade</th><th class="h-12 px-4 font-medium">Detalhes</th><th class="h-12 px-4 font-medium">IP</th></tr></thead>
+      <tbody>
+        <tr class="border-b"><td class="p-4">15/06/2026 08:32</td><td class="p-4">Dra. Mariana Alves</td><td class="p-4">ASSINAR</td><td class="p-4">Evolucao</td><td class="p-4">Evolução assinada e consulta finalizada</td><td class="p-4">192.168.0.10</td></tr>
+        <tr class="border-b"><td class="p-4">15/06/2026 08:15</td><td class="p-4">Dra. Mariana Alves</td><td class="p-4">VISUALIZAR</td><td class="p-4">Paciente</td><td class="p-4">Visualização da ficha de João Pedro da Silva</td><td class="p-4">192.168.0.10</td></tr>
+        <tr class="border-b"><td class="p-4">15/06/2026 07:58</td><td class="p-4">Recepção Clínica</td><td class="p-4">CRIAR</td><td class="p-4">Paciente</td><td class="p-4">Cadastro de Lívia Gomes Nascimento</td><td class="p-4">192.168.0.22</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+  <div class="flex items-center justify-between text-sm text-slate-600"><span>3 registros — página 1 de 1</span></div>
+</div>
+</template>
+<script src="app.js"></script>
+<script>renderShell("auditoria.html");</script>
+</body>
+</html>

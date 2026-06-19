@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receituário</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>@media print { .no-print { display: none !important; } @page { margin: 2cm; } }</style>
+</head>
+<body class="bg-white">
+<div class="mx-auto max-w-3xl space-y-6 p-8 text-slate-900">
+  <header class="border-b pb-4 text-center">
+    <h1 class="text-xl font-bold">Clínica PEP</h1>
+    <p class="text-sm text-slate-600">Rua Exemplo, 123 — Centro — Anápolis/GO</p>
+    <p class="text-sm text-slate-600">(62) 0000-0000</p>
+  </header>
+  <h2 class="text-center text-lg font-semibold">Receituário</h2>
+  <div class="text-sm">
+    <p><strong>Paciente:</strong> João Pedro da Silva</p>
+    <p><strong>CPF:</strong> 529.982.247-25</p>
+    <p><strong>Data:</strong> 15/06/2026</p>
+  </div>
+  <ol class="space-y-3">
+    <li class="border-b pb-2 text-sm"><p class="font-medium">1. Dipirona 500mg</p><p class="text-slate-700">1 cp — Oral — 6/6h — 3 dias</p></li>
+  </ol>
+  <div class="mt-16 text-center text-sm"><div class="mx-auto w-64 border-t border-slate-400 pt-1">Dra. Mariana Alves<br>CRM-GO 12345</div></div>
+  <div class="flex justify-center pt-6">
+    <button onclick="window.print()" class="no-print inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white">Imprimir / Salvar PDF</button>
+  </div>
+  <p class="no-print text-center text-xs text-slate-400"><a href="paciente-ficha.html" class="underline">← Voltar à ficha</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha do paciente — Clínica PEP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+<template id="page-content">
+<div class="space-y-6">
+  <header class="rounded-xl border bg-white p-6 shadow">
+    <h1 class="text-2xl font-semibold">João Pedro da Silva</h1>
+    <p class="mt-1 text-sm text-slate-600">CPF 529.982.247-25 · Nascimento 14/03/1988 · Particular</p>
+    <div class="mt-4 space-y-2">
+      <div class="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm"><strong class="text-red-700">Alergias:</strong> <span class="text-red-700">Dipirona</span></div>
+      <div class="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm"><strong class="text-amber-800">Medicamentos em uso:</strong> <span class="text-amber-800">Losartana 50mg</span></div>
+    </div>
+  </header>
+  <div>
+    <div class="inline-flex h-10 items-center justify-center gap-1 rounded-md bg-slate-100 p-1 text-slate-500">
+      <button onclick="aba('dados')" id="t-dados" class="rounded-sm bg-white px-3 py-1.5 text-sm font-medium text-slate-950 shadow">Dados</button>
+      <button onclick="aba('hist')" id="t-hist" class="rounded-sm px-3 py-1.5 text-sm font-medium">Histórico</button>
+      <button onclick="aba('docs')" id="t-docs" class="rounded-sm px-3 py-1.5 text-sm font-medium">Documentos</button>
+    </div>
+    <div id="p-dados" class="mt-4">
+      <div class="rounded-xl border bg-white p-6 shadow text-sm text-slate-600">Formulário com os dados cadastrais do paciente (nome, CPF, endereço, contato de emergência), editável.</div>
+    </div>
+    <div id="p-hist" class="mt-4 hidden">
+      <section class="rounded-xl border bg-white shadow">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b text-left text-slate-500"><th class="h-12 px-4 font-medium">Data/Hora</th><th class="h-12 px-4 font-medium">Profissional</th><th class="h-12 px-4 font-medium">Status</th><th class="h-12 px-4 font-medium">Evoluções</th></tr></thead>
+          <tbody>
+            <tr class="border-b"><td class="p-4">08/06/2026 08:00</td><td class="p-4">Dra. Mariana Alves</td><td class="p-4">Finalizada</td><td class="p-4">1 registrada</td></tr>
+            <tr class="border-b"><td class="p-4">14/04/2026 09:30</td><td class="p-4">Dra. Mariana Alves</td><td class="p-4">Finalizada</td><td class="p-4">1 registrada</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <div id="p-docs" class="mt-4 hidden space-y-6">
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Prescrições</h2>
+        <ul class="mt-3 space-y-2"><li class="flex items-center justify-between rounded-md border border-slate-200 px-3 py-2 text-sm"><span>Receituário de 08/06/2026</span><a href="imprimir-prescricao.html" target="_blank" class="text-sky-700 underline">Imprimir</a></li></ul>
+      </section>
+      <section class="rounded-xl border bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Atestados e declarações</h2>
+        <ul class="mt-3 space-y-2"><li class="flex items-center justify-between rounded-md border border-slate-200 px-3 py-2 text-sm"><span>Atestado de 08/06/2026</span><a href="imprimir-documento.html" target="_blank" class="text-sky-700 underline">Imprimir</a></li></ul>
+      </section>
+    </div>
+  </div>
+  <a href="atendimento.html" class="inline-flex h-10 items-center rounded-md bg-slate-900 px-4 text-sm font-medium text-white hover:bg-slate-800">Simular atendimento desta consulta →</a>
+</div>
+<script>
+function aba(n){['dados','hist','docs'].forEach(x=>{document.getElementById('p-'+x).classList.toggle('hidden',x!==n);var t=document.getElementById('t-'+x);if(x===n){t.classList.add('bg-white','text-slate-950','shadow');}else{t.classList.remove('bg-white','text-slate-950','shadow');}});}
+</script>
+</template>
+<script src="app.js"></script>
+<script>renderShell("pacientes.html");</script>
+</body>
+</html>
